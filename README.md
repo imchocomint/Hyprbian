@@ -21,11 +21,14 @@ Listed dependencies are:
 - hyprgraphics
 - hyprwayland-scanner
 - xdg-desktop-portal-hyprland
+
 as well as their libraries (except the last one). You need a way to install them (hint: Their official GitHub repository). Or if you've been with PikaOS' repository, just install all of them.
 
 You also need tomlplusplus and its development libraries.
 
 For libraries, use this to install: ` sudo apt install lib<softwarename>-deb `. Replace <softwarename> with what you need.
+
+Or just use pacstall lmao. I do not trust pacstall so much when it comes to this.
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
