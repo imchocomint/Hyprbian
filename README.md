@@ -30,16 +30,15 @@ Listed dependencies are:
 - hyprgraphics
 - hyprwayland-scanner
 - xdg-desktop-portal-hyprland
-- libaquamarine
-- libhyprutils
 
-as well as their development libraries (except the last three). All can be installed from GNU Guix, although I do not recommend this method. You should compiles the binaries as their guide, and manually install them on top of older version installed via apt.
 
-For development libraries, you can install older version from apt or the Debian website. It still works as of now, but things may change later.
+as well as their development libraries (except the last one, which is bundled in Releases). 
 
-You also need tomlplusplus and its development libraries (available on apt). This is hidden from the official documentations.
+For development libraries, you can install them from [Releases](https://github.com/imchocomint/Hyprbian/releases). This will be updated twice a month.
 
-To install development libraries: ` sudo apt install lib<software name>-dev ` or search on Debian for the name `lib<software name>-dev`
+All dependencies need to be installed after installing the libraries (to avoid compilation issues). They (dependencies) can be installed from GNU Guix, although I do not recommend this method. You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt. I would also recommend a tool called Pacstall. It do work in most cases, but for xdg-desktop-portal-hyprland you need some tinkering. 
+
+You also need tomlplusplus and its development libraries libtomlplusplus-dev (available in Debian repository). This is hidden from the official documentations.
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
@@ -120,8 +119,6 @@ Ans: Fuck off, or read all of the above again.
 Ans: Same brother, same. It took me an afternoon to compile GCC 15, and an evening to compile libstdc++15 on an i5-1135G7.
 ### Can we update to newer version?
 Ans: Until hyprland change their dependencies, just compile the newer version and reinstall Hyprland.
-### How do we install hypr dependencies
-Ans: Right now I can't give you a detailed guide, but the easiest way is to clone their GitHub repository and compile them.
 ### Isn't compiling everything the purpose of Gentoo?
 Ans: I just love Debian. Thank you.
 ### Why not (any other distro)?
