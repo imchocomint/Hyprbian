@@ -26,9 +26,11 @@ Listed dependencies are:
 
 as well as their libraries (except the last one). Some should be on GNU Guix (although I recommend against this method). Pacstall have all of these, but you should not expect this too much. Safest way is to build their binaries, then find a way to copy the files manually.
 
-Alternatively you can use a Debian source that have all of these softwares and libraries prepackaged. PikaOS' repository is a good choice.
+~~Alternatively you can use a Debian source that have all of these softwares and libraries prepackaged. PikaOS' repository is a good choice.~~
 
-You also need tomlplusplus and its development libraries. This is hidden from the official documentations.
+Now you have another option to install the required libraries. Head to Releases and download the .deb files. Install the files, then compile the dependencies yourself (except the last one since it's bundled in the deb files).
+
+You also need tomlplusplus and its development libraries (available on apt). This is hidden from the official documentations.
 
 If you're on APT, use this to install libraries: ` sudo apt install lib<softwarename>-deb `. Replace <softwarename> with what you need.
 
