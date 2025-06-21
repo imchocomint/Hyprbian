@@ -3,13 +3,15 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 
 # NOTE: Won't work on Debian 12 or lower. Untested on Ubuntu, but it should work.
 
+## NOTE 2: Things may break. Please don't ask me for help (unless for compiling stuffs).
+
 ## Prerequisites
 - A brain to read the official documentations
 - Debian 13 (trixie)/sid/experimental
 - Some libraries; we'll cover them later
 - Experience with make, cmake and the like
-- make, cmake, rust (?)
-- Patience (and maybe a good CPU)
+- make, cmake, clang
+- Patience and time (3+ hours) (and maybe a good CPU)
 - sway or KDE to install, as well as copy and pasting code
 
 ## Installing required libraries & dependencies (TBA)
@@ -22,13 +24,13 @@ Listed dependencies are:
 - hyprwayland-scanner
 - xdg-desktop-portal-hyprland
 
-as well as their libraries (except the last one). You need a way to install them (hint: Their official GitHub repository). Or if you've been with PikaOS' repository, just install all of them.
+as well as their libraries (except the last one). Some should be on GNU Guix (although I recommend against this method). Pacstall have all of these, but you should not expect this too much. Safest way is to build their binaries, then find a way to copy the files manually.
 
-You also need tomlplusplus and its development libraries.
+Alternatively you can use a Debian source that have all of these softwares and libraries prepackaged. PikaOS' repository is a good choice.
 
-For libraries, use this to install: ` sudo apt install lib<softwarename>-deb `. Replace <softwarename> with what you need.
+You also need tomlplusplus and its development libraries. This is hidden from the official documentations.
 
-Or just use pacstall lmao. I do not trust pacstall so much when it comes to this.
+If you're on APT, use this to install libraries: ` sudo apt install lib<softwarename>-deb `. Replace <softwarename> with what you need.
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
@@ -58,7 +60,9 @@ sudo update-alternatives --install /usr/bin/g++ g++ /opt/gcc-15/bin/g++ 100
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 50
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 50
 ```
-To change versions:
+then remove the entire source folder
+
+To change between GCC versions:
 ```
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
@@ -76,18 +80,17 @@ cd gcc-15.1.0
 ./contrib/download_prerequisites
 mkdir build
 cd build
-../configure \
-    --prefix=/opt/gcc-15 \
-    --enable-languages=c,c++ \
-    --disable-multilib
+../configure --prefix=/opt/gcc-15 --enable-languages=c,c++ --disable-multilib
 make -j$(nproc) all-gcc
 make -j$(nproc) all-target-libgcc
 make -j$(nproc) all-target-libstdc++-v3
-sudo make install-target-libstdc++-v
+sudo make install-target-libstdc++-v3
 echo "/opt/gcc-15/lib64" | sudo tee /etc/ld.so.conf.d/gcc-15.conf
 sudo ldconfig
 sudo ldconfig -p | grep libstdc++.so
 ```
+then remove the entire folder.
+
 It should work. Had to thank Google for that.
 
 ## Install Hyprland
@@ -107,7 +110,7 @@ Ans: Fuck off, or read all of the above again.
 ### My compile time is so high
 Ans: Same brother, same. It took me an afternoon to compile GCC 15, and an evening to compile libstdc++15 on an i5-1135G7.
 ### Can we update to newer version?
-Ans: Until hyprland change their dependencies, just compile the newer version again.
+Ans: Until hyprland change their dependencies, just compile the newer version and reinstall Hyprland.
 ### How do we install hypr dependencies
 Ans: Right now I can't give you a detailed guide, but the easiest way is to clone their GitHub repository and compile them.
 ### Isn't compiling everything the purpose of Gentoo?
