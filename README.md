@@ -14,6 +14,13 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 - Patience and time (3+ hours) (and maybe a good CPU)
 - sway or KDE to install, as well as copy and pasting code
 
+## Installing Hyprland (as a dummy package)
+Run ` sudo apt install hyprland `. It will install Hyprland (0.41), as well as older version of libraries and dependencies.
+
+And if you didn't have the chance to install them [before Debian mod team removed the packages from trixie (13)](https://tracker.debian.org/news/1648117/hyprland-removed-from-testing/), you're free to download their .deb packages from Debian web site.
+
+Since the base-files package (defines Debian version) version is shared between testing (13;trixie) and sid, Debian mistook all sid installation to be trixie, therefore not allowing user to install hyprland and its dependencies. This would be resolved when trixie is separated from unstable later this year.
+
 ## Installing required libraries & dependencies (TBA)
 Listed dependencies are:
 - aquamarine
@@ -23,16 +30,16 @@ Listed dependencies are:
 - hyprgraphics
 - hyprwayland-scanner
 - xdg-desktop-portal-hyprland
+- libaquamarine
+- libhyprutils
 
-as well as their libraries (except the last one). Some should be on GNU Guix (although I recommend against this method). Pacstall have all of these, but you should not expect this too much. Safest way is to build their binaries, then find a way to copy the files manually.
+as well as their development libraries (except the last three). All can be installed from GNU Guix, although I do not recommend this method. You should compiles the binaries as their guide, and manually install them on top of older version installed via apt.
 
-~~Alternatively you can use a Debian source that have all of these softwares and libraries prepackaged. PikaOS' repository is a good choice.~~
-
-Now you have another option to install the required libraries. Head to Releases and download the .deb files. Install the files, then compile the dependencies yourself (except the last one since it's bundled in the deb files).
+For development libraries, you can install older version from apt or the Debian website. It still works as of now, but things may change later.
 
 You also need tomlplusplus and its development libraries (available on apt). This is hidden from the official documentations.
 
-If you're on APT, use this to install libraries: ` sudo apt install lib<softwarename>-deb `. Replace <softwarename> with what you need.
+To install development libraries: ` sudo apt install lib<software name>-dev ` or search on Debian for the name `lib<software name>-dev`
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
