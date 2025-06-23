@@ -23,8 +23,10 @@ And if you didn't have the chance to install them [before Debian mod team remove
 
 Since the base-files package (defines Debian version) version is shared between testing (13;trixie) and sid, Debian mistook all sid installation to be trixie, therefore not allowing user to install hyprland and its dependencies. This would be resolved when trixie is separated from unstable later this year.
 
+See Optimization techniques (tba)
+
 ## Installing required libraries & dependencies (TBA)
-Listed dependencies are:
+Listed Hypr* dependencies are:
 - aquamarine
 - hyprlang
 - hyprcursor
@@ -33,14 +35,13 @@ Listed dependencies are:
 - hyprwayland-scanner
 - xdg-desktop-portal-hyprland
 
-
 as well as their development libraries (except the last one, which is bundled in Releases). 
 
 For development libraries, you can install them from [Releases](https://github.com/imchocomint/Hyprbian/releases). This will be updated twice a month.
 
 All dependencies need to be installed after installing the libraries (to avoid compilation issues). They (dependencies) can be installed from GNU Guix, although I do not recommend this method. You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt. I would also recommend a tool called Pacstall. It do work in most cases, but for xdg-desktop-portal-hyprland you need some tinkering. 
 
-You also need tomlplusplus and its development libraries libtomlplusplus-dev (available in Debian repository). This is hidden from the official documentations.
+You also need some libraries hidden from the official documentations: libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev. All of which are available in trixie/sid repository.
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
