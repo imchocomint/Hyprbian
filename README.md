@@ -49,7 +49,7 @@ The remaining Hypr* dependencies are:
 - hyprcursor
 - hyprgraphics
 
-They can be installed from GNU Guix, although I do not recommend this method. I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).
+I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).
 
 You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt.
 
@@ -91,7 +91,7 @@ sudo update-alternatives --config g++
 ```
 
 ## Install libstdc++15
-Script created by Gemini Pro. I used this on my main machine, so no need to worry.
+Script created by Gemini Pro (with human QA). Battle-tested by at least 3 instances.
 ### Required softwares
 ` sudo apt install build-essential gawk bison flex texinfo libgmp-dev libmpfr-dev libmpc-dev `
 ### Build steps (and install)
@@ -124,20 +124,32 @@ make all && sudo make install
 ```
 You can recompile the software to update it, I guess.
 
+### Via Pacstall
+` pacstall -I hyprland `
+
+If it do require compiling xdg-desktop-portal-hyprland, audit the build file. Change "debian:sid" to "debian:trixie" since Pacstall mistakes sid as Trixie (see above to know why)
+
 ## QnA
 ### Is it safe?
 Ans: If it isn't, I wouldn't have typed this.
-### Should I really trust an AI
-Ans: Fuck off, or read all of the above again.
+### [Should I really trust an AI](https://www.reddit.com/r/debian/comments/1lg5yyo/comment/mzajhgg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+I knew it! Someone has already asked this question.
+
+I have a neutral attitude about GenAI in general. I do not always trust them, but use them to tackle challenges in domains which I don't know anything about.
+
+Rest assured, this script is battle-tested, and do work in at least 3 differrent instances. And multiple people QA'd this.
+
+Maybe though. If you don't like it, get out or create a pull request with something safer.
 ### My compile time is so high
 Ans: Same brother, same. It took me an afternoon to compile GCC 15, and an evening to compile libstdc++15 on an i5-1135G7.
 ### Can we update to newer version?
 Ans: Until hyprland change their dependencies, just compile the newer version and reinstall Hyprland.
-### Isn't compiling everything the purpose of Gentoo?
-Ans: I just love Debian. Thank you.
+### Why not nix (package manager)?
+Ans: Can't (really) forward that to SDDM.
+### Why not Guix?
+Ans: This seems like a good idea. I will test it. But maybe it still requires libstdc++15 after all.
 ### Why not (any other distro)?
-Ans: Above.
-
+Ans: Some people have programs that works only on Debian (hell, what kind of monster would make that?) or is actively working on Debian compatability or is developing Debian, and they can't switch.
 
 # 
 So yeah. This may be the end. Thank you for reading all of this. Make sure to star this repo and share if you love it.
