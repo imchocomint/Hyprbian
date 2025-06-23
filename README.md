@@ -1,58 +1,24 @@
-# Hyprbian
-The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated)
+# Hyprbian-pacstall
+The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated) via Pacstall
+
+# Please do not trust this for now. I need a tester.
 
 # NOTE: Won't work on Debian 12 or lower. Untested on Ubuntu, but it should work.
 
 # NOTE 2: Things may break. Please don't ask me for help (unless for compiling stuffs).
 
-# NOTE 3: Thank you guys at the JaKoolIt Discord server for promoting and testing my project
 
 ## Prerequisites
 - A brain to read the official documentations
-- Debian ~~13 (trixie)/~~ sid/experimental
-- Some libraries; we'll cover them later
-- Experience with make, cmake and the like
+- Debian 13 (trixie)/sid/experimental
+- Pacstall
 - make, cmake, clang
 - Patience and time (3+ hours) (and maybe a good CPU)
 - sway or KDE to install, as well as copy and pasting code
 
-## Installing Hyprland (as a dummy package)
-If you're on sid, run ` sudo apt install hyprland `. It will install Hyprland (0.41).
 
-And if you are on Trixie and didn't have the chance to install [before Debian mod team removed the packages](https://tracker.debian.org/news/1648117/hyprland-removed-from-testing/), you're free to download [their .deb packages from Debian web site](https://packages.debian.org/sid/amd64/hyprland/download), or see [Optimization techniques](https://github.com/imchocomint/Hyprbian/blob/main/optimization-technique.md) to learn how to stay on Trixie while still using sid packages.
-
-### Partial explanation
-Since the base-files package (defines Debian version) version is shared between testing (13;trixie) and sid, Debian mistook all sid installation to be trixie, therefore not allowing user to install hyprland and its dependencies. This would be resolved when trixie is separated from unstable later this year.
-
-## Installing required libraries & dependencies (yet to be completed)
-Please do all of these steps in their correct order. Do not skip any step or do something you are not supposed to at the time. I can't guarantee success if you decide not to obey.
-### Installing system dependencies (first)
-Install libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev. All of which are available in trixie/sid repository.
-### Downloading packaged development libraries (second)
-Download all .deb packages and install them from [Releases](https://github.com/imchocomint/Hyprbian/releases). 
-
-This will be updated twice a month. Credits to PikaOS team.
-
-### Install aquamarine and hyprutils from the debs (third)
-Install hyprutils, libhyprutils and libhyprutils-dev from the .deb files first.
-
-Install aquamarine from the .deb file.
-
-### Install other libraries from the debs (fourth)
-Install libhyprcursor, libhyprlang-dev, libhyprlang and libhyprcursor-dev from the .debs file.
-
-Install the rest of the packages from the .deb files.
-
-### Compile and install the remaining dependencies (fifth)
-The remaining Hypr* dependencies are:
-- hyprlang
-- hyprcursor
-- hyprgraphics
-
-I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).
-
-You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt.
-
+## Installing required libraries & dependencies (to be added)
+If it do require compiling xdg-desktop-portal-hyprland, audit the build file. Change "debian:sid" to "debian:trixie" since Pacstall mistakes sid as Trixie (see above to know why)
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
@@ -116,18 +82,8 @@ then remove the entire folder.
 It should work. Had to thank Google for that.
 
 ## Install Hyprland
-Dependencies are all above
-```
-git clone --recursive https://github.com/hyprwm/Hyprland
-cd Hyprland
-make all && sudo make install
-```
-You can recompile the software to update it, I guess.
-
-### Via Pacstall
 ` pacstall -I hyprland `
 
-If it do require compiling xdg-desktop-portal-hyprland, audit the build file. Change "debian:sid" to "debian:trixie" since Pacstall mistakes sid as Trixie (see above to know why)
 
 ## QnA
 ### Is it safe?
