@@ -15,10 +15,16 @@ Package: *
 Pin: release a=trixie
 Pin-Priority: 900
 ```
-Solution submitted by [Ddubs on JaKoolIt Discord server](https://discord.com/channels/1151869464405606400/1386170957705642126/1386562279214026803)
+(Solution submitted by [Ddubs on JaKoolIt Discord server](https://discord.com/channels/1151869464405606400/1386170957705642126/1386562279214026803))
+
+So if you want to install the dummy Hyprland package on Trixie, use this command:
+
+` sudo apt install -t sid hyprland `
+
+Trixie users are recommended to use this way.
 
 ## Compiling hyprland-qtutils
-hyprland-qtutils is a mall bunch of utility applications that hyprland might invoke like dialogs or popups.
+hyprland-qtutils is a bunch of utility applications that hyprland might invoke like dialogs or popups.
 To compile hyprland-qtutils you need some Qt dependencies: 
 ```
 sudo apt install qt6-base-private-dev qt6-declarative-private-dev qt6-wayland-private-dev
