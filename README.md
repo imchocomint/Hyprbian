@@ -3,7 +3,9 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 
 # NOTE: Won't work on Debian 12 or lower. Untested on Ubuntu, but it should work.
 
-## NOTE 2: Things may break. Please don't ask me for help (unless for compiling stuffs).
+# NOTE 2: Things may break. Please don't ask me for help (unless for compiling stuffs).
+
+# NOTE 3: Thank you guys at the JaKoolIt Discord server for promoting and testing my project
 
 ## Prerequisites
 - A brain to read the official documentations
@@ -17,7 +19,7 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 ## Installing Hyprland (as a dummy package)
 Run ` sudo apt install hyprland `. It will install Hyprland (0.41), as well as older version of libraries and dependencies.
 
-And if you didn't have the chance to install them [before Debian mod team removed the packages from trixie (13)](https://tracker.debian.org/news/1648117/hyprland-removed-from-testing/), you're free to download their .deb packages from Debian web site.
+And if you didn't have the chance to install them [before Debian mod team removed the packages from trixie (13)](https://tracker.debian.org/news/1648117/hyprland-removed-from-testing/), you're free to download [their .deb packages from Debian web site](https://packages.debian.org/sid/amd64/hyprland/download).
 
 Since the base-files package (defines Debian version) version is shared between testing (13;trixie) and sid, Debian mistook all sid installation to be trixie, therefore not allowing user to install hyprland and its dependencies. This would be resolved when trixie is separated from unstable later this year.
 
