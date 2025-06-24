@@ -49,7 +49,7 @@ The remaining Hypr* dependencies are:
 - hyprcursor
 - hyprgraphics
 
-I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).
+~~I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).~~ No please, the packages' version are outdated, and should not work in this case.
 
 You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt.
 
@@ -123,11 +123,6 @@ cd Hyprland
 make all && sudo make install
 ```
 You can recompile the software to update it, I guess.
-
-### Via Pacstall
-` pacstall -I hyprland `
-
-If it do require compiling xdg-desktop-portal-hyprland, audit the build file. Change "debian:sid" to "debian:trixie" since Pacstall mistakes sid as Trixie (see above to know why)
 
 ## QnA
 ### Is it safe?
