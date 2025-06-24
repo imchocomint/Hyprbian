@@ -1,5 +1,5 @@
-# Hyprbian-pacstall
-The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated) via Pacstall
+# Hyprbian-guix
+The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated) via GNU Guix
 
 # Please do not trust this for now. I need a tester.
 
@@ -11,14 +11,13 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 ## Prerequisites
 - A brain to read the official documentations
 - Debian 13 (trixie)/sid/experimental
-- Pacstall
+- GNU Guix
 - make, cmake, clang
 - Patience and time (3+ hours) (and maybe a good CPU)
 - sway or KDE to install, as well as copy and pasting code
 
 
 ## Installing required libraries & dependencies (to be added)
-If it do require compiling xdg-desktop-portal-hyprland, audit the build file. Change "debian:sid" to "debian:trixie" since Pacstall mistakes sid as Trixie (see above to know why)
 
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
@@ -82,7 +81,7 @@ then remove the entire folder.
 It should work. Had to thank Google for that.
 
 ## Install Hyprland
-` pacstall -I hyprland `
+tba
 
 
 ## QnA
