@@ -1,3 +1,5 @@
+# We're in need of testers for this: https://github.com/imchocomint/Hyprbian/tree/painless-hyprbian-test
+
 # Hyprbian
 The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated)
 
