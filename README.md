@@ -1,7 +1,7 @@
 # We're in need of testers for this: https://github.com/imchocomint/Hyprbian/tree/painless-hyprbian-test
 
-# Hyprbian
-The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated)
+# Hyprbian (the painful way)
+The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated).
 
 # NOTE: Won't work on Debian 12 or lower. Untested on Ubuntu, but it should work.
 
