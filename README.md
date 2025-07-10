@@ -51,35 +51,15 @@ sudo update-alternatives --config g++
 ## Install libstdc++15
 Luckily libstdc++15 is automatically upgraded/installed alongside libstdc++14 while installing GCC 15. So, no need to do anything.
 
-## Install Hyprland
-Install the dummy package:
-` sudo apt install hyprland `
+## Install Hypr* packages
+Clone this : **https://github.com/imchocomint/hyprplus**
 
-Or, if you are somehow on Trixie, grab the binary then install:
-```
-wget http://ftp.us.debian.org/debian/pool/main/h/hyprland/hyprland_0.41.2+ds-1.3_amd64.deb
-sudo dpkg -i *.deb
-```
-
-## Install Hypr* dependencies
-For now most dependencies can be install via the provided .deb packages in Release. Some requires manually compiling from scratch.
-
-This is a to be added thing.
-
-## Upgrading Hyprland
-```
-git clone --recursive https://github.com/hyprwm/Hyprland
-cd Hyprland
-make all && sudo make install
-```
-
-then reboot
-
+cd to the folder, then ` sudo ./init.sh `
 ## QnA
 ### Is it safe?
 Ans: If it isn't, I wouldn't have typed this.
 ### Can we update to newer version?
-Ans: Until hyprland change their dependencies, just compile the newer version and reinstall Hyprland.
+Ans: Rerun hyprplus script again
 ### Why not nix (package manager)?
 Ans: Can't (really) forward that to SDDM.
 ### Why not Guix?
