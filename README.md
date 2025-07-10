@@ -16,6 +16,7 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 - Experience with make, cmake and the like
 - make, cmake, clang
 - Patience and time (3+ hours) (and maybe a good CPU)
+- Therapy
 - sway or KDE to install, as well as copy and pasting code
 
 ## Install GCC 15 (not applicable to experimental)
