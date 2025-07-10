@@ -18,44 +18,6 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 - Patience and time (3+ hours) (and maybe a good CPU)
 - sway or KDE to install, as well as copy and pasting code
 
-## Installing Hyprland (as a dummy package)
-If you're on sid, run ` sudo apt install hyprland `. It will install Hyprland (0.41).
-
-And if you are on Trixie and didn't have the chance to install [before Debian mod team removed the packages](https://tracker.debian.org/news/1648117/hyprland-removed-from-testing/), you're free to download [their .deb packages from Debian web site](https://packages.debian.org/sid/amd64/hyprland/download), or see [Optimization techniques](https://github.com/imchocomint/Hyprbian/blob/main/optimization-technique.md) to learn how to stay on Trixie while still using sid packages.
-
-### Partial explanation
-Since the base-files package (defines Debian version) version is shared between testing (13;trixie) and sid, Debian mistook all sid installation to be trixie, therefore not allowing user to install hyprland and its dependencies. This would be resolved when trixie is separated from unstable later this year.
-
-## Installing required libraries & dependencies (yet to be completed)
-Please do all of these steps in their correct order. Do not skip any step or do something you are not supposed to at the time. I can't guarantee success if you decide not to obey.
-### Installing system dependencies (first)
-Install libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev. All of which are available in trixie/sid repository.
-### Downloading packaged development libraries (second)
-Download all .deb packages and install them from [Releases](https://github.com/imchocomint/Hyprbian/releases). 
-
-This will be updated twice a month. Credits to PikaOS team.
-
-### Install aquamarine and hyprutils from the debs (third)
-Install hyprutils, libhyprutils and libhyprutils-dev from the .deb files first.
-
-Install aquamarine from the .deb file.
-
-### Install other libraries from the debs (fourth)
-Install libhyprcursor, libhyprlang-dev, libhyprlang and libhyprcursor-dev from the .debs file.
-
-Install the rest of the packages from the .deb files.
-
-### Compile and install the remaining dependencies (fifth)
-The remaining Hypr* dependencies are:
-- hyprlang
-- hyprcursor
-- hyprgraphics
-
-~~I would recommend a tool called Pacstall. It do work in most cases, but have some errors (will be discussed later).~~ No please, the packages' version are outdated, and should not work in this case.
-
-You should compiles the binaries as their guide (on GitHub), and manually install them on top of older version installed via apt.
-
-
 ## Install GCC 15 (not applicable to experimental)
 Unless you want to update, do not run this script on Debian experimental as it comes with GCC 15 (as well as libstdc++15) on default
 
@@ -117,14 +79,13 @@ then remove the entire folder.
 
 It should work. Had to thank Google for that.
 
-## Install Hyprland
-Dependencies are all above
-```
-git clone --recursive https://github.com/hyprwm/Hyprland
-cd Hyprland
-make all && sudo make install
-```
-You can recompile the software to update it, I guess.
+## Installing dependencies
+Install libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev. All of which are available in trixie/sid repository.
+
+## Install Hypr* packages
+Refer to [hyprplus](https://github.com/imchocomint/hyprplus)
+
+Basically git clone, cd and ` sudo ./init.sh `
 
 ## QnA
 ### Is it safe?
@@ -140,7 +101,7 @@ Maybe though. If you don't like it, get out or create a pull request with someth
 ### My compile time is so high
 Ans: Same brother, same. It took me an afternoon to compile GCC 15, and an evening to compile libstdc++15 on an i5-1135G7.
 ### Can we update to newer version?
-Ans: Until hyprland change their dependencies, just compile the newer version and reinstall Hyprland.
+Ans: Just run the hyprplus script again
 ### Why not nix (package manager)?
 Ans: Can't (really) forward that to SDDM.
 ### Why not Guix?
