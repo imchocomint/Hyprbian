@@ -34,7 +34,7 @@ Then update the repository
 
 ## Install GCC 15 alongside GCC 14
 ` sudo apt install -t experimental libcc1-0 `
-` sudo apt -t experimental install gcc-15 g++15 `
+` sudo apt -t experimental install gcc-15 g++-15 `
 
 Change them to default:
 ```
