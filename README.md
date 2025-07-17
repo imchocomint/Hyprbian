@@ -52,9 +52,11 @@ sudo update-alternatives --config g++
 Luckily libstdc++15 is automatically upgraded/installed alongside libstdc++14 while installing GCC 15. So, no need to do anything.
 
 ## Install Hypr* packages
-Clone this : **https://github.com/imchocomint/hyprplus**
+```
+wget https://github.com/imchocomint/hyprplus/blob/main/bootstrap.sh
+sudo bash ./bootstrap.sh
+```
 
-cd to the folder, then ` sudo ./init.sh `
 ## QnA
 ### Is it safe?
 Ans: If it isn't, I wouldn't have typed this.
