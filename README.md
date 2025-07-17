@@ -84,9 +84,10 @@ It should work. Had to thank Google for that.
 Install libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev. All of which are available in trixie/sid repository.
 
 ## Install Hypr* packages
-Refer to [hyprplus](https://github.com/imchocomint/hyprplus)
-
-Basically git clone, cd and ` sudo ./init.sh `
+```
+wget https://github.com/imchocomint/hyprplus/blob/main/bootstrap.sh
+sudo bash ./bootstrap.sh
+```
 
 ## QnA
 ### Is it safe?
