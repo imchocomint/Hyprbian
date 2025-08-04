@@ -1,9 +1,7 @@
 # Painless Hyprbian
-The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated), using dark magic.
+The ultimate guide to install lastest Hyprland on Debian trixie/experimental (since Hyprland package for Debian is super outdated), using dark magic.
 
-# TO BE ADDED. A LOT OF THING IS STILL MISSING
-
-# NOTE: Won't work on Debian 12 or lower.
+# NOTE: Won't work on Debian 12 or lower; did not test, but do not expect to work on Debian 13.
 
 # NOTE 2: Please consider carefully before following this guide. You're going to make your system a [FrankenDebian](https://wiki.debian.org/SourcesList#Precautions).
 
@@ -11,8 +9,7 @@ The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental
 ## Prerequisites
 - A brain to read the official documentations
 - Courage
-- Patience and time
-- Debian 13 (trixie)/sid (experimental is excluded)
+- Debian sid/experimental
 - make, cmake, clang
 - sway or KDE to install, as well as copy and pasting code
 
@@ -33,8 +30,10 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 Then update the repository
 
 ## Install GCC 15 alongside GCC 14
-` sudo apt install -t experimental libcc1-0 `
-` sudo apt -t experimental install gcc-15 g++-15 `
+```
+sudo apt install -t experimental libcc1-0 
+sudo apt -t experimental install gcc-15 g++-15
+```
 
 Change them to default:
 ```
