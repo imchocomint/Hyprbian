@@ -1,4 +1,6 @@
-# We're in need of testers for this: https://github.com/imchocomint/Hyprbian/tree/painless-hyprbian-test
+# Attention:
+## This is not the recommended way to install and run Hyprland since version 0.50.0 on Debian.
+## You should install GCC 15, G++ 15 and libstdc++ 15 via APT since it has many other packages required for usage.
 
 # Hyprbian (the painful way)
 The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated).
