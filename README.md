@@ -1,7 +1,7 @@
 # Painless Hyprbian
-The ultimate guide to install lastest Hyprland on Debian trixie/experimental (since Hyprland package for Debian is super outdated), using dark magic.
+The ultimate guide to install lastest Hyprland on Debian sid/trixie/experimental (since Hyprland package for Debian is super outdated), using dark magic.
 
-# NOTE: Won't work on Debian 12 or lower; did not test, but do not expect to work on Debian 13.
+# NOTE: Won't work on Debian 12 or lower.
 
 # NOTE 2: Please consider carefully before following this guide. You're going to make your system a [FrankenDebian](https://wiki.debian.org/SourcesList#Precautions).
 
@@ -9,7 +9,7 @@ The ultimate guide to install lastest Hyprland on Debian trixie/experimental (si
 ## Prerequisites
 - A brain to read the official documentations
 - Courage
-- Debian sid/experimental
+- Debian [trixie](https://media.discordapp.net/attachments/1400812641034960977/1402077346084950188/image.png?ex=689299c8&is=68914848&hm=374c06c9efacbb167d7cfce31022d6de76ee64f4d12daba8559f22c55897b8dc&=&format=webp&quality=lossless&width=921&height=516)/sid/experimental
 - make, cmake, clang
 - sway or KDE to install, as well as copy and pasting code
 
