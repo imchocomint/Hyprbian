@@ -65,14 +65,19 @@ sudo bash ./bootstrap.sh
 ## QnA
 ~~### Is it safe?
 Ans: If it isn't, I wouldn't have typed this.~~
+
 No question asked about safety anymore.
 ### Can we update to newer version?
 Ans: Rerun hyprplus script again
+
 ~~### Why not nix (package manager)?
 Ans: Can't (really) forward that to SDDM.~~
+
 who even need nix for Hyprland now?
+
 ~~### Why not Guix?
 Ans: This seems like a good idea. I will test it. But maybe it still requires libstdc++15 after all.~~
+
 same as above
 ### Why not (any other distro)?
 Ans: Some people have programs that works only on Debian (hell, what kind of monster would make that?) or is actively working on Debian compatability or is developing Debian, and they can't switch.
